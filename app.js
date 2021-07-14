@@ -1,5 +1,5 @@
 import express from 'express';
-import logger from 'logger';
+import logger from 'morgan';
 import cors from 'cors';
 
 import projectRoutes from './routes/projects.js';
