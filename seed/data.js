@@ -1,5 +1,5 @@
 import db from '../db/connection.js';
-import Project from '../models/project.js';
+import Post from '../models/post.js';
 import faker from 'faker';
 
 const insertData = async () => {
@@ -8,7 +8,7 @@ const insertData = async () => {
 
         // create an array of 30 objects
         // use faker package to generate fake data
-        const projects = [...Array(30)].map(item => {
+        const posts = [...Array(30)].map(item => {
             return {
                 title: faker.lorem.sentence(),
                 image_url: faker.internet.url(),
@@ -16,8 +16,8 @@ const insertData = async () => {
             }
 
         })
-        await Project.insertMany(projects)
-        console.log('Created projects!')
+        await Post.insertMany(posts)
+        console.log('Created posts!')
     // close database connection. done.
     db.close()
 }
