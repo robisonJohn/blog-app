@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema
 
-const Project = new Schema(
+const Post = new Schema(
         {
             title: { type: String, required: true },
             image_url: { type: String, required: true },
@@ -11,4 +11,4 @@ const Project = new Schema(
         { timestamps: true },       
 )
 
-export default mongoose.model('projects', Project)
+export default mongoose.model('posts', Post)
