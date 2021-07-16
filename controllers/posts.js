@@ -11,8 +11,8 @@ export const getPosts = async (req, res) => {
 
 export const getPost = async (req, res) => {
   try {
-    const postt = await Post.findById(req.params.id);
-    res.json(postt);
+    const post = await Post.findById(req.params.id);
+    res.json(post);
   } catch (error) {
     res.status(500).send(error.message);
   }
