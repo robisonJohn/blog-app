@@ -13,6 +13,7 @@ const Posts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       const allPosts = await getPosts();
+      console.log(allPosts);
       setPosts(allPosts);
       setSearchResult(allPosts);
     };
@@ -29,16 +30,15 @@ const Posts = () => {
 
   return (
     <Layout>
-      <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
+      {/* <Search onSubmit={handleSubmit} handleSearch={handleSearch} /> */}
       <div className="posts">
-        {searchResult.map((post, index) => {
+        {posts.map((post) => {
           return (
             <Post
               _id={post._id}
-              name={post.name}
-              imgURL={post.imgURL}
-              price={post.price}
-              key={index}
+              title={post.title}
+              image_url={post.image_url}
+              key={post._id}
             />
           );
         })}
