@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
-import './PostCard.css';
+import { Link } from "react-router-dom";
+import "./PostCard.css";
 
 const PostCard = (props) => {
-  return(
+  return (
     <div className="post-card">
-      <Link className="card" to={`api/posts/${props._id}`}>
+      <Link className="card" to={`/posts/${props._id}`}>
         <img className="post-card-imade" src={props.imgURL} alt={props.name} />
         <p>View</p>
       </Link>
     </div>
-  )
-}
+  );
+};
 
 export default PostCard;

@@ -9,10 +9,10 @@ const Nav = () => {
           The CoolestKidsontheBlock App
         </NavLink>
         <div className="navlinks">
-          <NavLink className="link" to="/blog">
+          <NavLink className="link" to="/posts">
             Blogs
           </NavLink>
-          <NavLink className="link" to="/add-blog">
+          <NavLink className="link" to="/add-post">
             Add Blog
           </NavLink>
         </div>
